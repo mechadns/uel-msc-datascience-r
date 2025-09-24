@@ -7,3 +7,6 @@ plot(iris$Petal.Length, iris$Petal.Width)
 
 
 plot(cos, 0, 2*pi)
+
+plot(tan, 0, 2*pi)
+
