@@ -105,3 +105,31 @@ plot(mtcars$wt, mtcars$mpg,
 
 # Clear Packages
 detach ("package:datasets", unload = TRUE) # For base
+
+## Overlaying Plots #
+
+# Load Packages ####
+library(datasets)
+
+# Load Data ####
+?lynx
+head(lynx)
+
+# Histogram
+hist(lynx)
+
+# Add some options
+hist(lynx,
+     breaks = 14, # "suggests" 14 bins
+     freg = FALSE, # Axis shows density, not freq.
+     col = "thistle1",
+     main = paste("Histogram of Annual Canadian Lynx",
+                  "Trappings, 1821-1934"),
+     xlab = "Number of Lynx Trapped")
+
+# Add normal distribution
+curve(dnorm(x, mean = mean(lynx), sd = sd(lynx)),
+      col = "thistle4",
+      lwd = 2, # Line width of 2 pixels
+      add = TRUE) # Superimpose on previous graph
+
