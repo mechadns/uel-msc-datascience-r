@@ -74,3 +74,34 @@ par(mfrow=c(1, 1))
 
 # Clear Packages
 detach ("package:datasets", unload = TRUE) # For base
+
+
+# SCATTERPLOTS #
+
+# Load Packages ####
+library(datasets)
+
+# Load Data ####
+?mtcars
+head(mtcars)
+
+# Good to first check for univariate distributions
+hist(mtcars$wt)
+hist(mtcars$mpg)
+
+# Basic X-Y plot for two quantitative variables
+plot(mtcars$wt, mtcars$mpg)
+
+# Add some options
+plot(mtcars$wt, mtcars$mpg,
+     pch = 19, #solid circle
+     cex = 1.5, # make 150% size
+     col = "#cc0000", # Red
+     main = "MPG as a function of Weight of Cars",
+     xlab = "Weight (in 1000 pounds)",
+     ylab = "MPG")
+
+# CLEAN UP ####
+
+# Clear Packages
+detach ("package:datasets", unload = TRUE) # For base
