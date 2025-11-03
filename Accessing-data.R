@@ -29,4 +29,21 @@ str(df3)
 
 x4 <- c(1:3)
 df4 <- cbind.data.frame(x4, y)
-df4$x4 <- factor(df4$x4, levels = c(1, 2, 3))
+df4$x4 <- factor(df4$x4, levels = c(1, 2, 3 ),
+                 labels = c("macOS", "Windows","Linux"))
+df4
+typeof(df4$x4)
+str(df4)
+
+# Ordered Factors & Lables
+x5 <- (1:3)
+df5 <- cbind.data.frame(x5, y)
+df5
+(df5$x5 <- ordered(df5$x5, levels = c(3, 1, 2),
+                   labels = c("No", "Maybe", "Yes")))
+df5
+typeof(df5$x5)
+str(df5)
+
+# CLEANUP ###
+rm(list = ls())
