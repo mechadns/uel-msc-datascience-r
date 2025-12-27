@@ -47,3 +47,23 @@ str(df5)
 
 # CLEANUP ###
 rm(list = ls())
+
+# ASSINGNMENT OPERATOR ####
+
+# Colon Operator ####
+# Assignment number 0 through 10 to x1
+x1 <- 0:10
+x1
+
+# Descending order
+x2 <- 10:0
+x2
+
+# Seq ####
+
+# Ascending values (duplicates 1:10)
+(x3 <- seq(10))
+
+# Specify changes in values
+
+(x4 <- seq(30, 0, by = -3))
