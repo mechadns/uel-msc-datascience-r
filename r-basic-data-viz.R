@@ -212,7 +212,7 @@ hist(iris$Petal.Length[iris$Species == "virginica" & iris$Petal.Length < 5.5],
 # Leave rows or columns blanks to select all
 i.setosa <- iris[iris$Species == "setosa", ]
 
-# Explore SubSample ####
+# Explore SubSample ###
 
 head(i.setosa)
 summary(i.setosa)
